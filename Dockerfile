@@ -13,4 +13,4 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
 # RUN cargo install sea-orm-cli
 
 # Expose ports for Actix and Vite
-EXPOSE 8080 3000
+EXPOSE 8080 5173

@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace:cached
+    ports:
+      - "8080:8080" # Rust backend
+      - "3000:3000" # Vite frontend
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: "postgres://postgres:password@db:5432/my_database"
+    command: tail -f /dev/null # Keeps the container running
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: my_database
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  db-data:

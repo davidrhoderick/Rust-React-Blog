@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "ryanluker.vscode-coverage-gutters",
+    "mgmcdermott.vscode-language-babel",
+    "dbaeumer.vscode-eslint",
+    "graphql.vscode-graphql",
+    "graphql.vscode-graphql-syntax",
+    "wix.vscode-import-cost",
+    "esbenp.prettier-vscode",
+    "pflannery.vscode-versionlens",
+    "rust-lang.rust-analyzer"
+  ]
+}
